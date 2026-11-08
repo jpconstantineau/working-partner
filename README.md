@@ -9,7 +9,7 @@ Skills and methods for humans and AI to think, plan, and work together.
 **Natural Planning: brainstorming** is a GTD skill for expanding project options before organizing or selecting them. It is an independent adaptation of David Allen's Natural Planning Model, not official GTD training.
 
 - Agent package: [productivity-gtd-npm-brainstorm](skills/productivity-gtd-npm-brainstorm/SKILL.md)
-- Human learning material: [HTML page](docs/gtd-npm-brainstorm.html) (GitHub Pages is not configured yet)
+- Human learning material: [learning page on GitHub Pages](https://jpconstantineau.github.io/working-partner/gtd-npm-brainstorm.html) ([HTML source](docs/gtd-npm-brainstorm.html)). Pages is configured to publish `main` / `docs`; this page becomes available after this PR is merged and deployment succeeds.
 - Attribution, sources and limits: [method reference](skills/productivity-gtd-npm-brainstorm/REFERENCE.md)
 
 This seed contains exactly two experimental skills: the router and one GTD method. No stable release, native plugin or release pipeline is published yet.
