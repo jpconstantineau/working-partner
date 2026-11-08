@@ -1,5 +1,5 @@
 ---
-name: productivity-gtd-npm-brainstorm
+name: productivity-brainstorming-gtd-npm
 description: "Use when a project needs more possible approaches before choosing a structure or action."
 license: MIT
 metadata:
@@ -34,7 +34,7 @@ Read [method reference](REFERENCE.md) before the first application or when a dis
 
 - **The existing idea pool is enough:** Skip new generation and organize the material already available.
 - **The bottleneck is an unknown fact:** Turn that gap into a research question instead of inventing more confident-sounding options.
-- **Ordinary capture repeats similar ideas:** Explore a different constraint, stakeholder perspective or approach. Keep existing ideas and the originating project question; do not make the user select a method. This standalone package does not require another skill or a toolkit router.
+- **Ordinary capture repeats similar ideas:** Explore a different constraint, stakeholder perspective or approach. Keep existing ideas and the originating project question; do not make the user select a method.
 
 ## Finish or checkpoint
 
@@ -47,4 +47,3 @@ If unfinished, preserve only useful task/project state using [STATE.md](STATE.md
 - [REFERENCE.md](REFERENCE.md): method mechanics, sources, attribution and evidence limits.
 - [EXAMPLE.md](EXAMPLE.md): fictional example and specific pitfall.
 - [STATE.md](STATE.md): useful facts and re-invocation checks.
-- [source-record.json](source-record.json): original research and source-operation mapping, for provenance audits.
