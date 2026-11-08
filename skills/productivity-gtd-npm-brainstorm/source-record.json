@@ -1,0 +1,69 @@
+{
+  "canonical_id": "gtd.npm-brainstorm",
+  "package_version": "0.1.0",
+  "source_repository": "jpconstantineau/List-Prototype",
+  "source_commit": "1cb76c511b31772f363d413e8c5a0c75b93344b2",
+  "source_path": "toolkit/productivity/skills/productivity-gtd-npm-brainstorm",
+  "source_card_sha256": "06f443598fbf4d3a26c75dd73d31706a49c308cf566cf9e678fcf5c94de2f2b7",
+  "digest_note": "Original shared source-artifact digest, not this individual SKILL.md.",
+  "packaging": "Condensed provenance from the existing source record; self-contained Working Partner adaptation.",
+  "source_record_id": "GTD-24",
+  "workflow": [
+    "Capture possibilities without immediate evaluation.",
+    "Explore gaps and alternative contributions.",
+    "Pass the resulting material to organizing when useful."
+  ],
+  "coaching_step_source_map": [
+    [
+      1
+    ],
+    [
+      2
+    ],
+    [
+      3
+    ]
+  ],
+  "current_source_audit": {
+    "assessment": "supported",
+    "checked": "2026-11-07",
+    "sources": [
+      {
+        "url": "https://gettingthingsdone.com/2010/01/how-gtd-can-help-with-applying-to-college/",
+        "title": "Natural Planning worked example by a GTD coach",
+        "authority": "Wayne Pepper, senior GTD coach, official worked example",
+        "supports": [
+          "Brainstorming can be skipped when enough ideas exist"
+        ],
+        "limit": "Single anecdotal case; six headings split purpose/principles within five components. No universal ranking scale.",
+        "recommended": true
+      },
+      {
+        "url": "https://josephbushnell.com/david-allen-interview/",
+        "title": "David Allen interview: Natural Planning mechanics",
+        "authority": "Direct David Allen interview transcript, Joseph Bushnell",
+        "supports": [
+          "Capture possibilities before critical organization"
+        ],
+        "limit": "Third-party-hosted primary interview transcript; audio not cross-checked. Exclude promotional effectiveness claims.",
+        "recommended": true
+      },
+      {
+        "url": "https://www.gtd.be/en/what-is-gtd/core-principles/the-natural-planning-model",
+        "title": "Natural Planning Model, regional description",
+        "authority": "Regional GTD-branded explanatory site; affiliation not independently established",
+        "supports": [
+          "Broad brainstorming stage naming only"
+        ],
+        "limit": "Generic benefits-oriented text does not substantiate exact organizing mechanics.",
+        "recommended": false
+      }
+    ],
+    "recommendation": "Do not mandate volume quotas or confuse generated ideas with endorsed plans."
+  },
+  "limitations": [
+    "No effectiveness or full-course completeness claim.",
+    "Source checks were not rerun for packaging.",
+    "Current remote source head unavailable; local source verified."
+  ]
+}
