@@ -14,6 +14,6 @@ Identify what is preventing progress. Match that need to a use case below, then 
 
 ## Use-case catalogue
 
-- **Brainstorming** → `productivity-brainstorming`: develop alternatives when the desired outcome is understood but possible approaches are thin or too similar.
+- **Brainstorming** → `productivity-brainstorming`: explore ideas, alternatives, or fresh perspectives for a question, challenge, decision, creative task, or project.
 
 For an unclear outcome, clarify the intended result first. For a missing fact, investigate. When the next action is already clear, help carry it out rather than adding a brainstorming exercise. If a selected skill is unavailable, consider another suitable available catalogue entry or continue directly.

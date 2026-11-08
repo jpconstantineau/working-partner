@@ -7,11 +7,11 @@ metadata:
   status: experimental
   version: "0.1.0"
   method: "David Allen's Getting Things Done (GTD), Natural Planning Model"
+  canonical-id: "gtd.npm-brainstorm"
+  invocation: "Agent-invoked; the user need not name or understand the method."
 ---
 
 # Natural Planning: brainstorming
-
-Canonical ID: `gtd.npm-brainstorm`. Agent-invoked; the user need not name or understand the method.
 
 ## Start from the user's work
 
