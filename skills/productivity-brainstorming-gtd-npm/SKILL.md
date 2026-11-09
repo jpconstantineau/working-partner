@@ -42,6 +42,10 @@ A bounded possibility pool exposes useful alternatives and can be organized into
 
 If unfinished, preserve only useful task/project state using [STATE.md](STATE.md). If the purpose is met, stop; a related method is not automatically the next task. Keep a draft, a verified external change and the user's acceptance distinct. Before any save, send, scheduling, deletion, delegation or execution, check the actual tool and current authority; these instructions grant neither.
 
+## Optional next step
+
+When the user wants to continue and the ideas need structure, offer `productivity-organizing-gtd-npm`. Carry forward the option pool, accepted outcome, constraints and open questions in the same effort. Do not restart intake or require another installation; if unavailable, use another fitting method or organize directly. Stop if the current request is satisfied.
+
 ## References at the point of need
 
 - [REFERENCE.md](REFERENCE.md): method mechanics, sources, attribution and evidence limits.

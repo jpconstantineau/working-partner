@@ -27,6 +27,22 @@ for path in skills:
     if name != "working-partner":
         require(bool(re.fullmatch(r"productivity(?:-[a-z0-9]+){0,3}", name)), f"{path}: expected class-use-method-tool naming")
 require("productivity-brainstorming-gtd-npm" in names, "GTD method has wrong selection-path name")
+# Check every NPM entry point, category path, continuity files and optional handoff.
+npm_uses = ("purpose", "outcomes", "brainstorming", "organizing", "actions")
+for index, use in enumerate(npm_uses):
+    name = f"productivity-{use}-gtd-npm"
+    directory = ROOT / "skills" / name
+    require(name in names, f"Missing NPM step: {name}")
+    router = ROOT / "skills" / f"productivity-{use}" / "SKILL.md"
+    require(router.exists() and name in router.read_text(), f"Missing category route: {name}")
+    require(f"productivity-{use}" in (ROOT / "skills/productivity/SKILL.md").read_text(), f"Missing class route: {use}")
+    for filename in ("REFERENCE.md", "EXAMPLE.md", "STATE.md", "templates/CHECKPOINT.md"):
+        require((directory / filename).exists(), f"{name}: missing {filename}")
+    if index + 1 < len(npm_uses) and (directory / "SKILL.md").exists():
+        target = f"productivity-{npm_uses[index + 1]}-gtd-npm"
+        require(target in (directory / "SKILL.md").read_text(), f"{name}: missing next-step pointer")
+    page = "brainstorm" if use == "brainstorming" else use
+    require((ROOT / "docs" / f"gtd-npm-{page}.html").exists(), f"Missing learning page: {use}")
 require(not list((ROOT / "skills").rglob("LICENSE")), "Use root LICENSE, include it in release distributions")
 require(not list(ROOT.rglob("source-record.json")), "Keep source details in Markdown")
 require(len(list((ROOT / "skills").rglob("SKILL.md"))) == len(skills), "Distributed skills must use the documented flat layout")

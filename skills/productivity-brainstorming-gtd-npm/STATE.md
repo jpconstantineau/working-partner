@@ -16,6 +16,8 @@ Create files only when there is useful state to preserve. Copy the blank [checkp
 
 If an established store uses different paths or document IDs, retain its convention. Record the exact index/checkpoint/ideas locators in the checkpoint and the conversation handoff; do not create a second local copy merely to match this layout.
 
+Reuse the same effort across Natural Planning stages. Preserve accepted purpose, principles, outcome, outline and other linked support when updating brainstorming state; do not replace the checkpoint wholesale with the blank template.
+
 ## Save a checkpoint
 
 1. Read the current checkpoint and idea pool, if present. Preserve user edits and reconcile changes; use conditional writes where supported. If another writer changed them, reread before updating.
