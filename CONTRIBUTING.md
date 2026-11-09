@@ -18,6 +18,10 @@ Category routers describe the full use case, not only the first listed method. B
 - Treat Working Partner as the product's home. Avoid references to earlier repository packaging and redundant machine-readable source records.
 - Keep maintenance tooling and skills separate from the distributed collection. Stable and experimental distribution must be explicit; folder names alone do not enforce installer discovery boundaries.
 
+## Continuity conventions
+
+Stateful skills must identify their work workspace, exact state filenames, naming format, saved content, and resume lookup order. Use `.working-partner/INDEX.md` and stable dated effort directories by default; preserve an established store instead of duplicating it. Keep blank templates inside the skill and populated state in the user’s private work workspace. A resume path should handle missing indexes, multiple matches, and incomplete saves.
+
 ## Checks
 
 Run `python3 scripts/check.py` for metadata, naming, layout, and local-link checks, then `npx skills@latest add . --list` for installer discovery. Test real installation and host behavior separately; discovery alone proves neither.

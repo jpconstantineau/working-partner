@@ -1,21 +1,38 @@
-# Continuity: Natural Planning: brainstorming
+# Resume Natural Planning brainstorming
 
-Canonical ID: `gtd.npm-brainstorm`. A saved method ID is a candidate, not authority to continue against the user's current intent.
+## Workspace and file names
 
-## Preserve only what changes the next session
+Resolve work-state paths from the user's chosen **work workspace**, never from the installed skill directory. Reuse an established private project workspace or explicitly designated private store. If none is established, ask where to keep the work before creating files. In chat-only environments, provide an unsaved checkpoint instead.
 
-When useful and authorized, retain the project identity and accepted purpose/outcome, idea pool and sources, selected or rejected ideas and reasons, unexplored angles, evidence gaps, last verified operation, method status, and cue for organizing or further generation. Distinguish user facts, evidence, agent hypotheses and decisions.
+Within that workspace, use:
 
-Keep ordinary conversational state in the conversation unless an existing private durable destination is available and authorized. Never save personal checkpoints in this public/distributable skill directory. Minimize personal data; never save secrets or reasoning/transcript dumps. Do not invent storage, overwrite user edits, or claim persistence without verifying it. Resolve conflicts using the user's current intent and current evidence, not a stale checkpoint. If no authorized store exists, offer an explicitly unsaved checkpoint in chat; do not promise cross-session memory.
+- `.working-partner/INDEX.md`: one-line entries linking each effort's checkpoint; the index helps select an effort, not duplicate its contents.
+- `.working-partner/efforts/YYYY-MM-DD-<topic-slug>/CHECKPOINT.md`: current outcome, progress, decisions, evidence gaps, and next step.
+- `.working-partner/efforts/YYYY-MM-DD-<topic-slug>/IDEAS.md`: the idea pool with source, status, and evaluation notes.
 
-Before writing, read the latest revision and use conditional updates where supported. Reconcile conflicting edits, inspect uncertain outcomes before retries, and verify the saved record by read-back or returned version. If atomic updates are unavailable, disclose the concurrency limitation. Preserve the record locator/revision and verification timestamp when relevant to safe resumption.
+Use the local date on which the effort starts and a short lowercase, hyphen-separated topic slug, for example `2026-11-09-workshop-venue`. Keep that directory name on later sessions. Reuse the same effort when continuing; for a distinct effort with a colliding name, choose the next unused suffix `-02`, `-03`, and create without overwriting. Do not rename an effort just because the wording of its title changes.
 
-## Re-enter from evidence
+Create files only when there is useful state to preserve. Copy the blank [checkpoint template](templates/CHECKPOINT.md) and [idea-pool template](templates/IDEAS.md), then fill them from actual work. Template links resolve from this skill; the populated copies belong in the work workspace. Never place personal work state in this public collection, installed skills, or published `docs/`. A hidden folder is not private by itself: verify the destination is not shared, committed, or automatically published before storing personal work. Use the selected store's permissions rather than altering them implicitly.
 
-1. Check what was selected or ruled out and why.
-2. Resume generation only if the remaining gap concerns alternatives.
-3. Continue the next incomplete operation in [SKILL.md](SKILL.md), without replaying completed questions.
+If an established store uses different paths or document IDs, retain its convention. Record the exact index/checkpoint/ideas locators in the checkpoint and the conversation handoff; do not create a second local copy merely to match this layout.
 
-Resume only when the cue matches the current project and intent. If facts changed, adapt and record why. If this method no longer fits, preserve useful outputs and mark it superseded; no router is required. Completing brainstorming does not complete the project. Preserve any still-open decision separately.
+## Save a checkpoint
 
-For unfinished work, record the concrete next useful action, what evidence to refresh, and when revisiting it would help. Record `gtd.npm-brainstorm` only if it still fits. Otherwise describe the next action without assuming another skill is installed. Completion or retirement leaves no automatic next invocation. Do not invent deadlines, reminders, scheduled work or permission to act.
+1. Read the current checkpoint and idea pool, if present. Preserve user edits and reconcile changes; use conditional writes where supported. If another writer changed them, reread before updating.
+2. Update `IDEAS.md` with stable idea IDs (`idea-001`, `idea-002`, …), sources and statuses. Preserve selected, rejected-for-now, and unassessed ideas distinctly.
+3. Update `CHECKPOINT.md` with the accepted outcome and constraints, last completed move, decision references, remaining questions, and exact next useful action. Link the idea pool instead of copying it. Record an ISO 8601 update timestamp with timezone.
+4. Read back both files and verify their contents. Then add or update the effort's entry in `INDEX.md` using this form: title linked to `efforts/<effort-id>/CHECKPOINT.md`, status (`active`, `paused`, `completed`, or `superseded`), last-updated timestamp, and one-line next step. Read back the index too.
+5. Leave the verified workspace and checkpoint locator in the handoff. If a write failed, report which files were saved and which were not; do not present the index as proof of a successful checkpoint.
+
+Keep only information needed to continue the work. Use factual summaries, not transcript or reasoning dumps. Completing brainstorming does not complete the project; retain the next decision separately.
+
+## Find and resume
+
+1. Prefer an explicit checkpoint link/path from the user or current handoff. Otherwise, in the known work workspace, open `.working-partner/INDEX.md`.
+2. Select the entry matching the current project/question. If multiple entries fit, ask which effort to resume rather than choosing by recency alone.
+3. If the index is absent, stale, or has a broken link, list only `.working-partner/efforts/*/CHECKPOINT.md` within that workspace and inspect the candidate headers. Do not scan unrelated directories. If nothing matches or the workspace is unknown, ask for the workspace/checkpoint or continue without claiming to have recovered state.
+4. Read the selected `CHECKPOINT.md`, then its linked `IDEAS.md` and only the evidence needed for the next move. Confirm the workspace/project identity, current status, and facts marked for refresh.
+5. Resume the recorded next step in [SKILL.md](SKILL.md) if it still fits the current request. Continue generation only when alternatives remain the gap; otherwise organize the existing ideas or use a better-fitting approach. Preserve superseded decisions and the reason for changing course.
+6. For completed or superseded efforts, reuse the useful output without automatically reopening brainstorming. An explicit new objective can start a new effort linked to the previous one.
+
+An orphan checkpoint can be added back to the index after its identity and contents are verified. Resolve disagreement between the index and checkpoint from the actual work and latest user direction, not a timestamp alone.
